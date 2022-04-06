@@ -146,12 +146,22 @@
         "content/beta/js/empty.js",
         "content/beta/js/series.js",
         "content/beta/js/watch.js",
-        "content/beta/js/main.js"
+        "content/beta/js/main.js",
+        "content/beta/js/random.js"
       ],
       "css": [
         "content/beta/css/main.css",
         "content/css/action-menu.css",
         "content/beta/css/action-menu.css"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://beta.crunchyroll.com/*"
+      ],
+      "js": [
+        "content/beta/js/random.js"
       ],
       "run_at": "document_idle"
     }
@@ -163,6 +173,14 @@
       ],
       "matches": [
         "https://static.crunchyroll.com/*"
+      ]
+    },
+    {
+      "resources": [
+        "images/*"
+      ],
+      "matches": [
+        "https://beta.crunchyroll.com/*"
       ]
     }
   ]

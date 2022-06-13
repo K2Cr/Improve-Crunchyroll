@@ -76,7 +76,7 @@ const API = new (class {
           },
         })
           .then((response) => response.json())
-          .then(({ cms: { bucket, signature, policy, key_pair_id } }) => {
+          .then(({ cms_beta: { bucket, signature, policy, key_pair_id } }) => {
             return {
               apiDomain,
               bucket,

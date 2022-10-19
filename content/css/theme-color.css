@@ -15,7 +15,7 @@ html {
 
 /* dark mode */
 html[ic_theme='1'] {
-  --primary: rgb(52, 58, 64);
+  --primary: rgb(24,24,24);
   --secondary: rgb(32, 38, 48);
   --tertiary: rgb(22, 28, 38);
   --primary-font: rgb(245, 245, 245);

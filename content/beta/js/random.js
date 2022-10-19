@@ -11,7 +11,7 @@
                 continue;
             }
             header_reloaded = true;
-            return;
+            break;
         }
         if (header_reloaded != true) { // Return if header hasn"t been regenerated
             return;

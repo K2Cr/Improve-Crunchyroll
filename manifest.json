@@ -146,8 +146,7 @@
         "content/beta/js/empty.js",
         "content/beta/js/series.js",
         "content/beta/js/watch.js",
-        "content/beta/js/main.js",
-        "content/beta/js/random.js"
+        "content/beta/js/main.js"
       ],
       "css": [
         "content/beta/css/main.css",
@@ -158,12 +157,15 @@
     },
     {
       "matches": [
-        "https://beta.crunchyroll.com/*"
+        "https://www.crunchyroll.com/*"
       ],
       "js": [
         "content/beta/js/random.js"
       ],
-      "run_at": "document_idle"
+      "resources": [
+        "images/random.svg"
+      ],
+      "run_at": "document_start"
     }
   ],
   "web_accessible_resources": [

@@ -162,9 +162,6 @@
       "js": [
         "content/beta/js/random.js"
       ],
-      "resources": [
-        "images/random.svg"
-      ],
       "run_at": "document_start"
     }
   ],
@@ -182,7 +179,7 @@
         "images/*"
       ],
       "matches": [
-        "https://beta.crunchyroll.com/*"
+        "https://www.crunchyroll.com/*"
       ]
     }
   ]

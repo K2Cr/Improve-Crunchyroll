@@ -47,8 +47,8 @@
   "confirmRestore": {
     "message": "Les paramètres actuels seront supprimés."
   },
-  "darkTheme": {
-    "message": "Mode sombre"
+  "crunchyrollIntro": {
+    "message": "Crunchyroll Intro"
   },
   "default": {
     "message": "Défaut"
@@ -96,22 +96,13 @@
     "message": "Général"
   },
   "headerOnHover": {
-    "message": "Entête (curseur)"
+    "message": "En-tête au survol"
   },
   "hide": {
     "message": "Cacher"
   },
-  "hideBackgroundImage": {
-    "message": "Masquer l'image d'arrière-plan"
-  },
-  "hideBanner": {
-    "message": "Cacher la bannière"
-  },
   "hideDimScreen": {
     "message": "Masquer l'écran sombre"
-  },
-  "hideMessageBox": {
-    "message": "Cacher alerte message"
   },
   "hidePlayPauseButton": {
     "message": "Cacher le bouton lecture/pause"
@@ -149,6 +140,12 @@
   "ok": {
     "message": "OK"
   },
+  "openHeaderMenuOnHover": {
+    "message": "Ouvrir le menu d'en-tête au survolr"
+  },
+  "pictureInPicture": {
+    "message": "Picture-in-Picture"
+  },
   "playbackRate": {
     "message": "Vitesse de lecture"
   },
@@ -179,17 +176,25 @@
   "shortcuts": {
     "message": "Raccourcis"
   },
+  "show": {
+    "message": "Afficher"
+  },
   "skip": {
     "message": "Sauter"
   },
-  "skipping": {
-    "message": "Saut"
+  "skipEvents": {
+    "message": "Sauter des événements"
   },
   "skipShortcut": {
     "message": "Sauter"
   },
   "skipTo": {
-    "message": "PASSER:"
+    "message": "IGNORER A : $time$",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
   },
   "speedDown": {
     "message": "Ralentir"
@@ -215,14 +220,11 @@
   "theaterMode": {
     "message": "Mode théâtre"
   },
-  "themes": {
-    "message": "Thèmes"
-  },
   "toggleHideUi": {
-    "message": "Basculer le masquage UI"
+    "message": "Masquer l'interface"
   },
   "unset": {
-    "message": "Désarmé"
+    "message": "Non défini"
   },
   "value": {
     "message": "Valeur"

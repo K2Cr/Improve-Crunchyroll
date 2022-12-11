@@ -47,8 +47,8 @@
   "confirmRestore": {
     "message": "As configurações atuais serão excluídas."
   },
-  "darkTheme": {
-    "message": "Modo escuro"
+  "crunchyrollIntro": {
+    "message": "Crunchyroll Abertura"
   },
   "default": {
     "message": "Padrão"
@@ -101,17 +101,8 @@
   "hide": {
     "message": "Esconder"
   },
-  "hideBackgroundImage": {
-    "message": "Ocultar a imagem de fundo"
-  },
-  "hideBanner": {
-    "message": "Ocultar bandeira"
-  },
   "hideDimScreen": {
     "message": "Ocultar tela escurecida"
-  },
-  "hideMessageBox": {
-    "message": "Ocultar caixa de mensagem"
   },
   "hidePlayPauseButton": {
     "message": "Ocultar botão reproduzir / pausar"
@@ -149,6 +140,12 @@
   "ok": {
     "message": "OK"
   },
+  "openHeaderMenuOnHover": {
+    "message": "Abra o menu de cabeçalho ao passar o mouse"
+  },
+  "pictureInPicture": {
+    "message": "Picture-in-Picture"
+  },
   "playbackRate": {
     "message": "Velocidade de playback"
   },
@@ -179,17 +176,25 @@
   "shortcuts": {
     "message": "Atalhos"
   },
+  "show": {
+    "message": "Mostrar"
+  },
   "skip": {
     "message": "Pular"
   },
-  "skipping": {
-    "message": "Pulando"
+  "skipEvents": {
+    "message": "Pular eventos"
   },
   "skipShortcut": {
     "message": "Pular"
   },
   "skipTo": {
-    "message": "PULE PARA:"
+    "message": "PULAR PARA: $time$",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
   },
   "speedDown": {
     "message": "Diminua a velocidade"
@@ -214,9 +219,6 @@
   },
   "theaterMode": {
     "message": "Modo de teatro"
-  },
-  "themes": {
-    "message": "Temas"
   },
   "toggleHideUi": {
     "message": "Alternar ocultar UI"

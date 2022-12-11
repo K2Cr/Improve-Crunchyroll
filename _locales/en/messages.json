@@ -47,8 +47,8 @@
   "confirmRestore": {
     "message": "The current settings will be deleted."
   },
-  "darkTheme": {
-    "message": "Dark mode"
+  "crunchyrollIntro": {
+    "message": "Crunchyroll Intro"
   },
   "default": {
     "message": "Default"
@@ -101,17 +101,8 @@
   "hide": {
     "message": "Hide"
   },
-  "hideBackgroundImage": {
-    "message": "Hide background image"
-  },
-  "hideBanner": {
-    "message": "Hide banner"
-  },
   "hideDimScreen": {
     "message": "Hide dim screen"
-  },
-  "hideMessageBox": {
-    "message": "Hide message box"
   },
   "hidePlayPauseButton": {
     "message": "Hide play/pause button"
@@ -149,6 +140,12 @@
   "ok": {
     "message": "OK"
   },
+  "openHeaderMenuOnHover": {
+    "message": "Open header menu on hover"
+  },
+  "pictureInPicture": {
+    "message": "Picture-in-Picture"
+  },
   "playbackRate": {
     "message": "Playback speed"
   },
@@ -179,17 +176,25 @@
   "shortcuts": {
     "message": "Shortcuts"
   },
+  "show": {
+    "message": "Show"
+  },
   "skip": {
     "message": "Skip"
   },
-  "skipping": {
-    "message": "Skipping"
+  "skipEvents": {
+    "message": "Skip events"
   },
   "skipShortcut": {
     "message": "Skip"
   },
   "skipTo": {
-    "message": "SKIP TO:"
+    "message": "SKIP TO: $time$",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
   },
   "speedDown": {
     "message": "Speed down"
@@ -214,9 +219,6 @@
   },
   "theaterMode": {
     "message": "Theater mode"
-  },
-  "themes": {
-    "message": "Themes"
   },
   "toggleHideUi": {
     "message": "Toggle hide UI"

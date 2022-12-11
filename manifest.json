@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "version": "3.4.6",
+  "version": "4.2.0",
   "name": "__MSG_extName__",
   "description": "__MSG_extDescription__",
   "author": "Thomas Tavernier <thomas@tavernier.dev>",
@@ -12,146 +12,61 @@
     "storage"
   ],
   "action": {
-    "default_popup": "popup/index.html"
+    "default_popup": "lib/popup/index.html"
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "lib/background/background.js"
   },
   "content_scripts": [
-    {
-      "matches": [
-        "https://www.crunchyroll.com/*"
-      ],
-      "exclude_matches": [
-        "https://www.crunchyroll.com/games/*",
-        "https://www.crunchyroll.com/checkout/*"
-      ],
-      "js": [
-        "shared/chromeStorage.js",
-        "content/js/api.js",
-        "content/js/main.js"
-      ],
-      "css": [
-        "content/css/crunchyroll.css",
-        "content/css/theme-color.css",
-        "content/css/crunchyroll-theme.css"
-      ],
-      "run_at": "document_start"
-    },
-    {
-      "matches": [
-        "https://www.crunchyroll.com/*"
-      ],
-      "exclude_matches": [
-        "https://www.crunchyroll.com/forum*",
-        "https://www.crunchyroll.com/videos/*",
-        "https://www.crunchyroll.com/*/videos/*",
-        "https://www.crunchyroll.com/comics/*",
-        "https://www.crunchyroll.com/*/news*",
-        "https://www.crunchyroll.com/news*",
-        "https://www.crunchyroll.com/games/*",
-        "https://www.crunchyroll.com/user/*",
-        "https://www.crunchyroll.com/editprofile/*",
-        "https://www.crunchyroll.com/acct/*",
-        "https://www.crunchyroll.com/email_subscriptions*",
-        "https://www.crunchyroll.com/inbox*",
-        "https://www.crunchyroll.com/notifications*",
-        "https://www.crunchyroll.com/orderstatus*",
-        "https://www.crunchyroll.com/home/*",
-        "https://www.crunchyroll.com/devices*",
-        "https://www.crunchyroll.com/premium_comparison*",
-        "https://www.crunchyroll.com/*/premium_comparison*",
-        "https://www.crunchyroll.com/collections/*",
-        "https://www.crunchyroll.com/redeem*",
-        "https://www.crunchyroll.com/apps/*",
-        "https://www.crunchyroll.com/about/*",
-        "https://www.crunchyroll.com/advertising*",
-        "https://www.crunchyroll.com/dmca_policy*",
-        "https://www.crunchyroll.com/tos*",
-        "https://www.crunchyroll.com/privacy*",
-        "https://www.crunchyroll.com/*/privacy*"
-      ],
-      "css": [
-        "content/css/crunchyroll.episode.css"
-      ],
-      "run_at": "document_start"
-    },
-    {
-      "matches": [
-        "https://www.crunchyroll.com/*"
-      ],
-      "exclude_matches": [
-        "https://www.crunchyroll.com/forum*",
-        "https://www.crunchyroll.com/videos/*",
-        "https://www.crunchyroll.com/*/videos/*",
-        "https://www.crunchyroll.com/comics/*",
-        "https://www.crunchyroll.com/*/news*",
-        "https://www.crunchyroll.com/news*",
-        "https://www.crunchyroll.com/games/*",
-        "https://www.crunchyroll.com/user/*",
-        "https://www.crunchyroll.com/editprofile/*",
-        "https://www.crunchyroll.com/acct/*",
-        "https://www.crunchyroll.com/email_subscriptions*",
-        "https://www.crunchyroll.com/inbox*",
-        "https://www.crunchyroll.com/notifications*",
-        "https://www.crunchyroll.com/orderstatus*",
-        "https://www.crunchyroll.com/home/*",
-        "https://www.crunchyroll.com/devices*",
-        "https://www.crunchyroll.com/premium_comparison*",
-        "https://www.crunchyroll.com/*/premium_comparison*",
-        "https://www.crunchyroll.com/collections/*",
-        "https://www.crunchyroll.com/redeem*",
-        "https://www.crunchyroll.com/apps/*",
-        "https://www.crunchyroll.com/about/*",
-        "https://www.crunchyroll.com/advertising*",
-        "https://www.crunchyroll.com/dmca_policy*",
-        "https://www.crunchyroll.com/tos*",
-        "https://www.crunchyroll.com/privacy*",
-        "https://www.crunchyroll.com/*/privacy*"
-      ],
-      "js": [
-        "content/js/action-menu.js",
-        "content/js/crunchyroll.collection.js",
-        "content/js/crunchyroll.episode.js"
-      ],
-      "css": [
-        "content/css/action-menu.css",
-        "content/css/crunchyroll.collection.css"
-      ],
-      "run_at": "document_idle"
-    },
     {
       "matches": [
         "https://static.crunchyroll.com/vilos-v2/web/vilos/player.html*"
       ],
       "js": [
-        "shared/chromeStorage.js",
-        "content/js/crunchyrollVideoPlayerV2.js",
-        "shared/shortcutUtils.js"
+        "lib/shared/chromeStorage.js",
+        "lib/shared/renderer.js",
+        "lib/shared/shortcutUtils.js",
+        "lib/content_scripts/player/buttons/buttons.js",
+        "lib/content_scripts/player/fast-forward-backward/fast-forward-backward.js",
+        "lib/content_scripts/player/playback/playback.js",
+        "lib/content_scripts/player/render/render.js",
+        "lib/content_scripts/player/settings/settings.js",
+        "lib/content_scripts/player/shortcuts/shortcuts.js",
+        "lib/content_scripts/player/skippers/skippers.js",
+        "lib/content_scripts/player/main.js"
       ],
       "css": [
-        "content/css/crunchyrollVideoPlayer2.css"
+        "lib/content_scripts/player/buttons/buttons.css",
+        "lib/content_scripts/player/fast-forward-backward/fast-forward-backward.css",
+        "lib/content_scripts/player/playback/playback.css",
+        "lib/content_scripts/player/render/render.css",
+        "lib/content_scripts/player/settings/settings.css",
+        "lib/content_scripts/player/skippers/skippers.css",
+        "lib/content_scripts/player/main.css"
       ],
       "all_frames": true,
       "run_at": "document_start"
     },
     {
       "matches": [
-        "https://beta.crunchyroll.com/*"
+        "https://beta.crunchyroll.com/*",
+        "https://www.crunchyroll.com/*"
       ],
       "js": [
-        "shared/chromeStorage.js",
-        "content/beta/js/api.js",
-        "content/js/action-menu.js",
-        "content/beta/js/empty.js",
-        "content/beta/js/series.js",
-        "content/beta/js/watch.js",
-        "content/beta/js/main.js"
+        "lib/shared/chromeStorage.js",
+        "lib/shared/renderer.js",
+        "lib/content_scripts/website/api/api.js",
+        "lib/content_scripts/website/action-menu/action-menu.js",
+        "lib/content_scripts/website/pages/empty.js",
+        "lib/content_scripts/website/pages/series/series.js",
+        "lib/content_scripts/website/pages/watch/watch.js",
+        "lib/content_scripts/website/main.js"
       ],
       "css": [
-        "content/beta/css/main.css",
-        "content/css/action-menu.css",
-        "content/beta/css/action-menu.css"
+        "lib/shared/theme-color.css",
+        "lib/content_scripts/website/action-menu/action-menu.css",
+        "lib/content_scripts/website/pages/watch/watch.css",
+        "lib/content_scripts/website/main.css"
       ],
       "run_at": "document_idle"
     },
